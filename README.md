@@ -13,4 +13,5 @@
 **based on Mayuri-chan kernel source (cip branch)**
 
 Source: https://github.com/Mayuri-Chan/android_kernel_xiaomi_gale
+
 my build channel: https://t.me/bantengalbino
