@@ -2,7 +2,6 @@
 
 **Moon-Beam Kernel** is a custom Android kernel focused on **stability between performance and battery**.
 
-telegram:https://t.me/bantengalbino
 ---
 
 ## Supported Devices
@@ -14,3 +13,4 @@ telegram:https://t.me/bantengalbino
 **based on Mayuri-chan kernel source (cip branch)**
 
 Source: https://github.com/Mayuri-Chan/android_kernel_xiaomi_gale
+my build channel: https://t.me/bantengalbino
