@@ -2,7 +2,7 @@
 
 **Moon-Beam Kernel** is a custom Android kernel focused on **stability between performance and battery**.
 
-**join my telegram channel** : https://t.me/bantengalbino
+telegram:https://t.me/bantengalbino
 ---
 
 ## Supported Devices
