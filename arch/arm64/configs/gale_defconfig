@@ -9,6 +9,7 @@ CONFIG_IKHEADERS=y
 ### 2023.6.13 chengyuan@longcheer.com HTH-297301  En-large kernel log buffer size __S ###
 CONFIG_LOG_BUF_SHIFT=21
 ### 2023.6.13 chengyuan@longcheer.com HTH-297301  En-large kernel log buffer size __E ###
+CONFIG_CC_OPTIMIZE_FOR_PERFORMANCE=y
 CONFIG_UCLAMP_TASK=y
 CONFIG_UCLAMP_TASK_GROUP=y
 CONFIG_CPUSETS=y
