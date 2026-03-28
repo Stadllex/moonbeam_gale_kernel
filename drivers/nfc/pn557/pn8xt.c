@@ -509,7 +509,7 @@ static long set_jcop_download_state(struct pn8xt_dev *pn8xt_dev, unsigned long a
         case JCP_DN_INIT:
             if(pn8xt_dev->service_pid) {
                 pr_err("%s:nfc service pid %ld", __func__, pn8xt_dev->service_pid);
-                signal_handler(JCP_DN_INIT, pn8xt_dev->service_pid);
+                signal_handler((pn8xt_access_st_t)JCP_DN_INIT, pn8xt_dev->service_pid);
             } else {
                 if (*cur_state & ST_JCP_DN) {
                     ret = -EINVAL;
@@ -526,7 +526,7 @@ static long set_jcop_download_state(struct pn8xt_dev *pn8xt_dev, unsigned long a
             }
             break;
         case JCP_SPI_DN_COMP:
-            signal_handler(JCP_DWP_DN_COMP, pn8xt_dev->service_pid);
+            signal_handler((pn8xt_access_st_t)JCP_DWP_DN_COMP, pn8xt_dev->service_pid);
             pn8xt_update_state(pn8xt_dev, ST_JCP_DN, false);
             break;
         case JCP_DWP_DN_COMP:
