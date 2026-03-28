@@ -377,9 +377,9 @@ static int silfp_set_spi(struct silfp_data *fp_dev, bool enable)
     }
     LOG_MSG_DEBUG(DBG_LOG, "[%s] done\n",__func__);
 #else
+	struct mt_spi_t *ms = NULL;
     int ret = -ENOENT;
 	fp_dev->spi1=silfp_dev.spi1;
-    struct mt_spi_t *ms = NULL;
     ms = spi_master_get_devdata(fp_dev->spi1->master);
 
     if ( /*!fp_dev->pin.spi_id || */ !ms ) {
