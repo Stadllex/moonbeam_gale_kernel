@@ -362,6 +362,7 @@ static ssize_t mtkfb_set_refresh(struct device *dev, struct device_attribute *at
 		return len;
 }
 
+#if 0
 static int mtkfb_set_rgb_point_init(void)
 {
 	if (strncmp(mtkfb_lcm_name, "dsi_panel_c3u_43_02_0a_dsc_vdo", 36) == 0) {
@@ -378,6 +379,7 @@ static int mtkfb_set_rgb_point_init(void)
 		return -1;
 	}
 }
+#endif
 
 static ssize_t mtkfb_get_wpoint(struct device *dev, struct device_attribute *attr, char *buf)
 {
