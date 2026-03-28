@@ -1931,8 +1931,8 @@ static struct platform_driver gf_platform_driver = {
 static int gf_probe(struct platform_device  *pdev)
 {
 	struct gf_device *gf_dev = &goodix_dev;
-	gf_dev->device = &pdev->dev;
 	int status = -EINVAL;
+	gf_dev->device = &pdev->dev;
 	gf_dev->spi = spi_fingerprint;
 
 	FUNC_ENTRY();
@@ -2315,10 +2315,10 @@ static int gf_remove(struct platform_device *pdev)
 static int check_hwid(struct spi_device *spi)
 {
 	struct gf_device *gf_dev = &goodix_dev;
-	gf_dev->spi = spi;
 	int status = -EINVAL;
 	unsigned char rx_test[10] = {0};
 	unsigned int retry = 0;
+	gf_dev->spi = spi;
 
 	spin_lock_init(&gf_dev->spi_lock);
 	mutex_init(&gf_dev->buf_lock);
