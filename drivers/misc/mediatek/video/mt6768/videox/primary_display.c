@@ -3855,7 +3855,7 @@ static void display_feature_push_table(struct LCM_setting_table *table,
 #define CABC_3RD_DELAY 10
 #define CABC_4RD_DELAY 10
 static int last_cabc_mode_3rd = 0xf0000;
-static struct LCM_setting_table *last_cabc_on_cmd_3rd=cabc1_on_3rd;
+// static struct LCM_setting_table *last_cabc_on_cmd_3rd=cabc1_on_3rd;
 static struct LCM_setting_table *last_cabc_off_cmd_3rd=cabc1_off_3rd;
 static void cabc_mode_switch_3rd(int param) {
 	mdelay(CABC_3RD_DELAY);
@@ -8903,6 +8903,7 @@ struct LCM_DRIVER *DISP_GetLcmDrv(void)
 	return NULL;
 }
 
+#if 0
 static int _screen_cap_by_cmdq(unsigned int mva, enum UNIFIED_COLOR_FMT ufmt,
 			       enum DISP_MODULE_ENUM after_eng)
 {
@@ -9046,20 +9047,21 @@ static int _screen_cap_by_cpu(unsigned int mva, enum UNIFIED_COLOR_FMT ufmt,
 	_primary_path_unlock(__func__);
 	return 0;
 }
+#endif
 
 int primary_display_capture_framebuffer_ovl(unsigned long pbuf,
 	enum UNIFIED_COLOR_FMT ufmt)
 {
 	int ret = 0;
 #ifdef CONFIG_MTK_M4U
-	unsigned int w_xres = primary_display_get_width();
-	unsigned int h_yres = primary_display_get_height();
-	unsigned int pixel_byte = primary_display_get_bpp() / 8;
-	int buffer_size = h_yres * w_xres * pixel_byte;
-	enum DISP_MODULE_ENUM after_eng = DISP_MODULE_OVL0;
-	int tmp;
-	struct m4u_client_t *m4uClient = NULL;
-	unsigned int mva = 0;
+//	unsigned int w_xres = primary_display_get_width();
+//	unsigned int h_yres = primary_display_get_height();
+//	unsigned int pixel_byte = primary_display_get_bpp() / 8;
+//	int buffer_size = h_yres * w_xres * pixel_byte;
+//	enum DISP_MODULE_ENUM after_eng = DISP_MODULE_OVL0;
+//	int tmp;
+//	struct m4u_client_t *m4uClient = NULL;
+//	unsigned int mva = 0;
 #endif
 	DISPMSG("primary capture: begin\n");
 
