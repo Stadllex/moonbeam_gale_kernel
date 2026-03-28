@@ -113,7 +113,7 @@ struct TEEC_UUID uuid_ta_gf = { 0x8888c03f, 0xc30c, 0x4dd0,
 static LIST_HEAD(device_list);
 static DEFINE_MUTEX(device_list_lock);
 
-static struct wakeup_source fp_wakesrc;
+// static struct wakeup_source fp_wakesrc;
 static struct wakeup_source *fp_wakelock;
 static unsigned int bufsiz = (25 * 1024);
 module_param(bufsiz, uint, S_IRUGO);
@@ -216,7 +216,7 @@ static int gf_get_gpio_dts_info(struct gf_device *gf_dev)
 #ifdef CONFIG_OF
 	int ret;
 	int virq;
-	int status = -EINVAL;
+	// int status = -EINVAL;
 
 	struct device_node *node = NULL;
 	struct platform_device *pdev = NULL;
@@ -297,6 +297,7 @@ static int gf_get_gpio_dts_info(struct gf_device *gf_dev)
 	return 0;
 }
 
+#if 0
 static int gf_get_sensor_dts_info(void)
 {
 /*
@@ -314,12 +315,13 @@ static int gf_get_sensor_dts_info(void)
 */
 	return 0;
 }
+#endif
 
-static void gf_power_on(struct gf_device *gf_dev)
-{
+// static void gf_power_on(struct gf_device *gf_dev)
+// {
 	//pinctrl_select_state(gf_dev->pinctrl_gpios, gf_dev->pins_power_high);
-	pr_err("%s now set power pin to high\n", __func__);
-}
+//	pr_err("%s now set power pin to high\n", __func__);
+// }
 
 static int gf_hw_power_enable(struct gf_device *gf_dev)
 {
@@ -2234,12 +2236,12 @@ err_fw:
 err_readid:
 	pr_err("%s cannot find the sensor,now exit\n", __func__);
 	gf_hw_power_disable(gf_dev);
-err_buf:
+// err_buf:
 	mutex_destroy(&gf_dev->buf_lock);
 	mutex_destroy(&gf_dev->release_lock);
 
 	gf_dev = NULL;
-err:
+// err:
 	gf_debug(ERR_LOG, "[gf][goodix_test] %s, probe fail\n" , __func__);
 	FUNC_EXIT();
 	return status;
