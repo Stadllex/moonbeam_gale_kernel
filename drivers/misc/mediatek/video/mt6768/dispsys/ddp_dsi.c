@@ -199,7 +199,7 @@ static struct LCM_UTIL_FUNCS lcm_utils_dsidual;
 static cmdqBackupSlotHandle _h_intstat;
 
 static struct LCM_mipi_read_write lcm_mipi_read_write ={0};
-static struct LCM_UTIL_FUNCS *utils = NULL;
+// static struct LCM_UTIL_FUNCS *utils = NULL;
 
 unsigned int impendance0[2] = { 0 }; /* MIPITX_DSI_IMPENDANCE0 */
 unsigned int impendance1[2] = { 0 }; /* MIPITX_DSI_IMPENDANCE1 */
