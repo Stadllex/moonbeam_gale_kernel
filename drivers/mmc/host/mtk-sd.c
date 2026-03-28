@@ -760,7 +760,7 @@ static void msdc_retry(struct msdc_host *host, int addr, int val, int expr, int 
 static void msdc_reset_hw(struct msdc_host *host)
 {
 	u32 val;
-	u32 count = 0;
+//	u32 count = 0;
 	dev_info(host->mmc->parent, "%s\n",__func__);
 
 	//sdr_set_bits(host->base + MSDC_CFG, MSDC_CFG_RST);
