@@ -21,7 +21,7 @@
 #include "cpufreq_moonbeam.h"
 
 /* On-demand governor macros */
-#define DEF_FREQUENCY_UP_THRESHOLD		(45)
+#define DEF_FREQUENCY_UP_THRESHOLD		(65)
 #define DEF_SAMPLING_DOWN_FACTOR		(3)
 #define MAX_SAMPLING_DOWN_FACTOR		(100000)
 #define MICRO_FREQUENCY_UP_THRESHOLD		(90)
