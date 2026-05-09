@@ -300,7 +300,6 @@ static void __sbi_store_value(struct f2fs_attr *a,
 		f2fs_bug_on(sbi, 1);
 		f2fs_err(sbi, "store sysfs node value with wrong type");
 	}
-
 }
 
 static ssize_t __sbi_store(struct f2fs_attr *a,
