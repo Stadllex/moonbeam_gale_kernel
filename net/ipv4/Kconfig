@@ -702,7 +702,7 @@ config TCP_CONG_BBRPLUS
         
 choice
 	prompt "Default TCP congestion control"
-	default DEFAULT_BBRPLUS
+	default DEFAULT_WESTWOOD
 	help
 	  Select the TCP congestion control that will be used by default
 	  for all connections.
