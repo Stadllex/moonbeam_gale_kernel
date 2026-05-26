@@ -218,7 +218,6 @@ ___update_load_sum(u64 now, struct sched_avg *sa,
 	 * crossed period boundaries, finish.
 	 */
 	accumulate_sum(delta, sa, load, runnable, running);
-		return 0;
 
 	return 1;
 }
