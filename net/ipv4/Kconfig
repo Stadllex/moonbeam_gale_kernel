@@ -492,23 +492,9 @@ menuconfig TCP_CONG_ADVANCED
 
 if TCP_CONG_ADVANCED
 
-config TCP_CONG_BIC
-	tristate "Binary Increase Congestion (BIC) control"
-	default m
-	---help---
-	BIC-TCP is a sender-side only change that ensures a linear RTT
-	fairness under large windows while offering both scalability and
-	bounded TCP-friendliness. The protocol combines two schemes
-	called additive increase and binary search increase. When the
-	congestion window is large, additive increase with a large
-	increment ensures linear RTT fairness as well as good
-	scalability. Under small congestion windows, binary search
-	increase provides TCP friendliness.
-	See http://www.csc.ncsu.edu/faculty/rhee/export/bitcp/
-
 config TCP_CONG_CUBIC
 	tristate "CUBIC TCP"
-	default m
+	default y
 	---help---
 	This is version 2.0 of BIC-TCP which uses a cubic growth function
 	among other techniques.
