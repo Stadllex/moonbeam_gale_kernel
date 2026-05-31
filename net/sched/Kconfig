@@ -44,20 +44,6 @@ if NET_SCHED
 
 comment "Queueing/Scheduling"
 
-config NET_SCH_HTB
-	tristate "Hierarchical Token Bucket (HTB)"
-	---help---
-	  Say Y here if you want to use the Hierarchical Token Buckets (HTB)
-	  packet scheduling algorithm. See
-	  <http://luxik.cdi.cz/~devik/qos/htb/> for complete manual and
-	  in-depth articles.
-
-	  HTB is very similar to CBQ regarding its goals however is has
-	  different properties and different algorithm.
-
-	  To compile this code as a module, choose M here: the
-	  module will be called sch_htb.
-
 config NET_SCH_HFSC
 	tristate "Hierarchical Fair Service Curve (HFSC)"
 	---help---
@@ -129,17 +115,6 @@ config NET_SCH_TEQL
 
 	  To compile this code as a module, choose M here: the
 	  module will be called sch_teql.
-
-config NET_SCH_TBF
-	tristate "Token Bucket Filter (TBF)"
-	---help---
-	  Say Y here if you want to use the Token Bucket Filter (TBF) packet
-	  scheduling algorithm.
-
-	  See the top of <file:net/sched/sch_tbf.c> for more details.
-
-	  To compile this code as a module, choose M here: the
-	  module will be called sch_tbf.
 
 config NET_SCH_CBS
 	tristate "Credit Based Shaper (CBS)"
