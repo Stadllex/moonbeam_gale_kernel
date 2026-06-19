@@ -2667,8 +2667,8 @@ static int cake_init(struct Qdisc *sch, struct nlattr *opt,
 
 	q->rate_bps = 0; /* unlimited by default */
 
-	q->interval = 100000; /* 10ms default */
-	q->target   = 15000; /* 5ms: codel RFC argues
+	q->interval = 100000; /* 100ms default */
+	q->target   =  5000; /* 5ms: codel RFC argues
 			       * for 5 to 10% of interval
 			       */
 	q->rate_flags |= CAKE_FLAG_SPLIT_GSO;
